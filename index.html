@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>Dork King</title>
+	<link rel="canonical" href="http://dorkking.blindf.com" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<style>
+#Div2 {
+  display: none;
+}
+</style>
+</head>
+<body>
+<div id="Div1">
+<div class="w3-container w3-green">
+ <img style="width:12%;" src="www-sub/img/blindf-logo.png">
+ <p>Dork King (Bug Bounty Dorks)</p> 
+   <center><form id="targetForm" method="POST" name="dork">
+    <input type="text" placeholder="target.com" name="target" id="targetInput" value="">
+    <input type="submit" value="submit" name="submit"> 
+  </form> </center>
+ <input id="Button1" style="float:right;" type="button" value="Next" onclick="switchVisible();"/>
+</div>
+	<div class="w3-row-padding">
+	  <div class="w3-third">  
+		<a href="https://www.google.com/search?q=site:%20intitle:index.of" target="_blank" class="search-link"><div><p>Directory Listing</p>
+		<img id="icon" src="images/directory.png"></div></a>
+	</div>
+	<div class="w3-third">  
+		<a href="https://www.google.com/search?q=site: ext:xml | ext:conf | ext:cnf | ext:reg | ext:inf | ext:rdp | ext:cfg | ext:txt | ext:ora | ext:ini" target="_blank" class="search-link"><div><p>Config Files</p>
+		<img id="icon" src="images/conf.png"></div></a>
+    </div>
+  <div class="w3-third">
+    <a href="https://www.google.com/search?q=site: ext:sql | ext:dbf | ext:mdb" target="_blank" class="search-link"><div><p>Database Files</p>
+    <img id="icon" src="images/database.png"></div></a>
+  </div>
+  <div class="w3-third">
+    <a href="https://www.google.com/search?q=site: inurl:wp- | inurl:wp-content | inurl:plugins | inurl:uploads | inurl:themes | inurl:download" target="_blank" class="search-link"><div><p>WordPress</p>
+    <img id="icon" src="images/wordpress.png"></div></a>
+  </div>
+
+  <div class="w3-third">
+    <a href="https://www.google.com/search?q=site: inurl:/wp-content | inurl:/wp-includes | inurl:wp-admin.php | inurl:wp-config.php | wp-content/uploads | inurl:Wp-load | inurl:wp-signup.php | inurl:Wp-json | inrul:wp-includes | inurl:index.php | inurl:wp-login.php | inurl:wp-links-opml.php | inurl:wp-activate.php | inurl:wp-blog-header.php | inurl:wp-cron.php | inurl:wp-links.php | inurl:wp-mail.php | inurl:xmlrpc.php | inurl:wp-settings.php | inurl:wp-trackback.php | inurl:admin-bar.php" target="_blank" class="search-link"><div><p>WP juicy ext (19)</p>
+    <img id="icon" src="images/wordpress.png"></div></a>
+  </div>
+  <div class="w3-third">
+    <a href="https://www.google.com/search?q=site: filetype:sql intext:wp_users phpmyadmin" target="_blank" class="search-link"><div><p>wp_users</p>
+    <img id="icon" src="images/wordpress.png"></div></a>
+  </div>
+  <div class="w3-third">
+    <a href="https://www.google.com/search?q=site: ext:log" target="_blank" class="search-link"><div><p>Log Files</p>
+    <img id="icon" src="images/log.png"></div></a>
+  </div>
+  <div class="w3-third">
+    <a href="https://www.google.com/search?q=site: ext:bkf | ext:bkp | ext:bak | ext:old | ext:backup" target="_blank" class="search-link"><div><p>Backup/Old Files</p>
+    <img id="icon" src="images/backup.png"></div></a>
+  </div>
+  <div class="w3-third">
+    <a href="https://www.google.com/search?q=site: inurl:login | inurl:signin | intitle:Login | intitle: signin | inurl:auth" target="_blank" class="search-link"><div><p>Login Pages</p>
+   <img id="icon" src="images/login.png"></div></a>
+  </div>
+  <div class="w3-third">
+    <a href="https://www.google.com/search?q=site: inurl:login" target="_blank" class="search-link"><div><p>Login Pages 2</p>
+   <img id="icon" src="images/login.png"></div></a>
+  </div>
+
+  <div class="w3-third">
+    <a href="https://www.google.com/search?q=site: inurl:signup | inurl:sign-up | inurl:register | inurl:registration" target="_blank" class="search-link"><div><p>Register/Signup Pages</p>
+   <img id="icon" src="images/register.jpeg"></div></a>
+  </div>
+
+
+  <div class="w3-third">
+    <a href="https://www.google.com/search?q=site: inurl:login | inurl:admin | inurl:login | inurl:logon | inurl:sign-in | inurl:signin | inurl:signup | inurl:sign-up | inurl:dash | inurl:portal | inurl:panel | inurl:register | inurl:administrator" target="_blank" class="search-link"><div><p>Login/Admin finder</p>
+   <img id="icon" src="images/login.png"></div></a>
+  </div>
+  <div class="w3-third">
+    <a href="https://www.google.com/search?q=site: intext:&quot;sql syntax near&quot; | intext:&quot;syntax error has occurred&quot; | intext:&quot;incorrect syntax near&quot; | intext:&quot;unexpected end of SQL command&quot; | intext:&quot;Warning: mysql_connect()&quot; | intext:&quot;Warning: mysql_query()&quot; | intext:&quot;Warning: pg_connect()&quot;" target="_blank" class="search-link"><div><p>Sql Error</p>
+    <img id="icon" src="images/sql.png"></div></a>
+  </div>
+  <div class="w3-third">
+    <a href="https://www.google.com/search?q=site: ext:doc | ext:docx | ext:odt | ext:pdf | ext:rtf | ext:sxw | ext:psw | ext:ppt | ext:pptx | ext:pps | ext:csv" target="_blank" class="search-link"><div><p>Exposed Docs</p>
+    <img id="icon" src="images/document.png"></div></a>
+  </div>
+  <div class="w3-third">
+    <a href="https://www.google.com/search?q=site: ext:txt | ext:old | ext:pdf | ext:xml | ext:xls | ext:xlsx | ext:ppt | ext:pptx | ext:doc | ext:docx intext:“confidential” | intext:“Not for Public Release” | intext:”internal use only” | intext:“do not distribute” | ext:rtf | ext:csv | ext:json | ext:zip | ext:rar | ext:log | ext:conf | ext:sql | ext:cnf | ext:ini | ext:env | ext:sh | ext:swp | ext:~ | ext:git | ext:svn | ext:htpasswd | ext:htaccess" target="_blank" class="search-link"><div><p>Sensitive Documents #1</p>
+    <img id="icon" src="images/document.png"></div></a>
+  </div>
+  <div class="w3-third">
+    <a href="https://www.google.com/search?q=site: ext:php intitle:phpinfo 'published by the PHP Group'" target="_blank" class="search-link"><div><p>phpinfo()</p>
+    <img id="icon" src="images/php.png"></div></a>
+  </div>
+  <div class="w3-third">
+    <a href="https://www.google.com/search?q=site:  inurl:shell | inurl:backdoor | inurl:wso | inurl:cmd | shadow | passwd | boot.ini | inurl:backdoor" target="_blank" class="search-link"><div><p>Find Backdoor</p>
+    <img id="icon" src="images/backdoor.png"></div></a>
+  </div>
+  <div class="w3-third">
+    <a href="https://www.google.com/search?q=site: inurl:redir | inurl:url | inurl:redirect | inurl:return | inurl:src=http | inurl:r=http" target="_blank" class="search-link"><div><p>Open Redirect</p>
+    <img id="icon" src="images/redirect.png"></div></a>
+  </div>
+
+  <div class="w3-third">
+    <a href="https://www.google.com/search?q=site: inurl:show= | inurl:site= | inurl:uri= | inurl:val= | inurl:next= | inurl:url= | inurl:target= | inurl:rurl= | inurl:dest= | inurl:redir= | inurl:out= | inurl:image_url= | inurl:returnTo= | inurl:checkout_url= | inurl:continue= | inurl:=http | inurl:?next= | inurl:nexrurI=" target="_blank" class="search-link"><div><p>Open Redirects (41)</p>
+    <img id="icon" src="images/redirect.png"></div></a>
+  </div>
+  <div class="w3-third">
+    <a href="https://www.google.com/search?q=site: inurl:show= | inurl:site= | inurl:uri= | inurl:val= | inurl:next= | inurl:url= | inurl:target= | inurl:rurl= | inurl:dest= | inurl:redir= | inurl:out= | inurl:image_url= | inurl:returnTo= | inurl:checkout_url= | inurl:continue= | inurl:=http | inurl:?next= | inurl:nexrurI=" target="_blank" class="search-link"><div><p>Open Redirect (18)</p>
+    <img id="icon" src="images/redirect.png"></div></a>
+  </div>
+  <div class="w3-third">
+    <a href="https://www.google.com/search?q=site:http://ideone.com | site:http://codebeautify.org | site:http://codeshare.io | site:http://codepen.io | site:http://repl.it | site:http://justpaste.it | site:http://pastebin.com | site:http://jsfiddle.net | site:http://trello.com | site:*.atlassian.net | site:bitbucket.org  " target="_blank" class="bitbucket-link"><div><p>3rd Party Exposure</p>
+    <img id="icon" src="images/thirdparty.jpg"></div></a>
+  </div>
+  <div class="w3-third">
+    <a href="https://www.google.com/search?q=site:pastebin.com " target="_blank" class="pastbin-link"><div><p>Find in Pastebin </p>
+    <img id="icon" src="images/pastebin.jpg"></div></a>
+  </div>
+  <div class="w3-third">
+    <a href="https://crt.sh/?q=" target="_blank" class="search-link"><div><p>Subdomains(crt.sh)</p>
+    <img id="icon" src="images/crt_sh.jpg"></div></a>
+  </div>
+  <div class="w3-third">
+    <a href="https://www.google.com/search?q=site: inurl:wp-content | inurl:wp-includes" target="_blank" class="search-link"><div><p>Find WordPress #2</p>
+    <img id="icon" src="images/wordpress.png"></div></a>
+  </div>
+  <div class="w3-third">
+    <a href="https://www.google.com/search?q=site:atlassian.net | site:bitbucket.org" target="_blank" class="search-link"><div><p>Bitbucket/Atlassian</p>
+    <img id="icon" src="images/bitbucket.png"><img id="icon" src="images/atlassian.png"></div></a>
+  </div>
+   <div class="w3-third">
+    <a href="https://www.google.com/search?q=site:stackoverflow.com" target="_blank" class="search-link"><div><p>StackOverflow</p>
+    <img id="icon" src="images/stackoverflow.jpg"></div></a>
+  </div>
+  <div class="w3-third">
+    <a href="https://web.archive.org/cdx/search/cdx?url=*./*&amp;output=text&amp;fl=original&amp;collapse=urlkey" target="_blank" class="search-link"><div><p>All Wayback Urls</p>
+    <img id="icon" src="images/wayback.jpg"></div></a>
+  </div>
+  <div class="w3-third">
+    <a href="https://github.com/search?q=%22*.%22" target="_blank" class="search-link"><div><p>Search in GitHub</p>
+    <img id="icon" src="images/github.png"></div></a>
+  </div>
+  <div class="w3-third">
+    <a href="https://www.openbugbounty.org/search/?search=" target="_blank" class="search-link"><div><p>OpenBugBounty</p>
+    <img id="icon" src="images/openbugbounty.jpg"></div></a>
+  </div>
+  <div class="w3-third">
+    <a href="https://www.google.com/search?q=site:inurl:/.git  -github" target="_blank" class="search-link"><div><p>.git Folder</p>
+    <img id="icon" src="images/git.png"></div></a>
+  </div>
+   <div class="w3-third">
+    <a href="https://www.google.com/search?q=site: ext:swf" target="_blank" class="search-link"><div><p>Find .swf (Google)</p>
+    <img id="icon" src="images/swf.png"></div></a>
+  </div>
+   <div class="w3-third">
+    <a href="https://www.google.com/search?q=site: ext:swf" target="_blank" class="search-link"><div><p>Find .swf file (Yandex)</p>
+    <img id="icon" src="images/swf.png"></div></a>
+  </div>
+  <div class="w3-third">
+    <a href="https://www.google.com/search?q=site:.s3.amazonaws.com" target="_blank" class="s3-link"><div><p>S3 Buckets</p>
+    <img id="icon" src="images/s3.png"></div></a>
+  </div>
+   <div class="w3-third">
+    <a href="https://www.shodan.io/search?query=example.com" target="_blank" class="search-link"><div><p>Shodan Search</p>
+    <img id="icon" src="images/shodan.jpg"></div></a>
+  </div>
+  <div class="w3-third">
+    <a href="https://www.google.com/search?q=site: filetype:wsdl | filetype:WSDL | ext:svc | inurl:wsdl | Filetype: ?wsdl | inurl:asmx?wsdl | inurl:jws?wsdl | intitle:_vti_bin/sites.asmx?wsdl | inurl:_vti_bin/sites.asmx?wsdl" target="_blank" class="search-link"><div><p>API (WSDL)</p>
+    <img id="icon" src="images/wsdl.png"></div></a>
+  </div>
+  <div class="w3-third">
+    <a href="https://gist.github.com/search?q=*.%22example.com%22" target="_blank" class="search-link"><div><p>GIST github search</p>
+    <img id="icon" src="images/github.png"></div></a>
+  </div>
+  <div class="w3-third">
+    <a href="https://www.google.com/search?q=site: filetype:config &quot;apache&quot;" target="_blank" class="search-link"><div><p>Apache Config Files</p>
+    <img id="icon" src="images/apache.png"></div></a>
+  </div>
+  <div class="w3-third">
+    <a href="https://www.google.com/search?q=site: ext:action | ext:struts | ext:do" target="_blank" class="search-link"><div><p>Apache Struts RCE</p>
+    <img id="icon" src="images/struts.jpg"></div></a>
+  </div>
+  <div class="w3-third">
+    <a href="https://www.google.com/search?q=site:*/server-status apache" target="_blank" class="search-link"><div><p>Apache Server Status</p>
+    <img id="icon" src="images/apache.png"></div></a>
+  </div>
+  <div class="w3-third">
+    <a href="https://www.google.com/search?q=site: inurl:readme | inurl:license | inurl:install | inurl:setup | inurl:config" target="_blank" class="search-link"><div><p>Install/Setup Files</p>
+    <img id="icon" src="images/setup.png"></div></a>
+  </div>
+   <div class="w3-third">
+    <a href="https://www.google.com/search?q=site: inurl:&quot;/phpinfo.php&quot; | inurl:&quot;.htaccess&quot;" target="_blank" class="search-link"><div><p>.htaccess/phpinfo()</p>
+    <img id="icon" src="images/access.png"></div></a>
+  </div>
+    <div class="w3-third">
+    <a href="https://securityheaders.com/?q=example.com&amp;followRedirects=on" target="_blank" class="search-link"><div><p>Security Headers</p>
+    <img id="icon" src="images/headers.png"></div></a>
+  </div>
+   <div class="w3-third">
+    <a href="https://publicwww.com/websites/%22example.com%22/" target="_blank" class="search-link"><div><p>Source Code PublicWWW</p>
+    <img id="icon" src="images/sourcecode.png"></div></a>
+  </div>
+   <div class="w3-third">
+    <a href="https://www.google.com/search?q=site:github.com | site:gitlab.com &quot;&quot;" target="_blank" class="search-link"><div><p>Search GitLab and Github </p>
+    <img id="icon" src="images/gitlab.png">
+	<img id="icon" src="images/github.png"></div></a>
+  </div>
+   <div class="w3-third">
+    <a href="https://web.archive.org/cdx/search?url=example.com/&amp;matchType=domain&amp;collapse=urlkey&amp;output=text&amp;fl=original&amp;filter=urlkey:.*php&amp;limit=100000" target="_blank" class="search-link"><div><p>Find .php (WayBack)</p>
+    <img id="icon" src="images/wayback.jpg"></div></a>
+  </div>
+   <div class="w3-third">
+    <a href="https://www.google.com/search?q=site:*. -site:www." target="_blank" class="search-link"><div><p>Find Subdomains (Google)</p>
+    <img id="icon" src="images/subdomains.png"></div></a>
+  </div>
+   <div class="w3-third">
+    <a href="https://www.google.com/search?q=site:digitaloceanspaces.com" target="_blank" class="search-link"><div><p>Digital Ocean Space</p>
+    <img id="icon" src="images/digitalocean.png"></div></a>
+  </div>
+   <div class="w3-third">
+    <a href="https://www.google.com/search?q=site:*.*." target="_blank" class="search-link"><div><p> Sub-Subdomains (Google)</p>
+    <img id="icon" src="images/subdomains.png"><img id="icon" src="images/subdomains.png"></div></a>
+  </div>
+
+</div>
+</div> 
+
+
+
+
+<!-- Div 1 Closed here-->
+<!-- Div 2 starts here-->
+<div id="Div2">
+	<div class="w3-container w3-green">
+	 <img style="width:12%;" src="www-sub/img/blindf-logo.png">
+	 <p>Dork King (Bug Bounty Dorks)</p> 
+     <center><form id="targetForm2" method="POST" name="dork">
+      <input type="text" placeholder="target.com" name="target" id="targetInput2" value="">
+      <input type="submit" value="submit" name="submit">
+    </form> </center>
+    <input id="Button1" style="float:right;" type="button" value="Previous" onclick="switchVisible();"/>
+	</div>
+	<div class="w3-row-padding"><!--w3-row-padding div starts here -->
+		<div class="w3-third">  
+			<a href="https://www.google.com/search?q=site: intext:&quot;first name&quot; | intext:firstname | intext:submit | intext:contact | intext:&quot;Is this article 
+      helpful&quot; | intext:feedback | intext:&quot;Demo Request&quot;" target="_blank" class="search-link"><div><p>Form Finder intext</p>
+			<img id="icon" src="images/form.png"></div></a>
+		</div>
+		<div class="w3-third">  
+			<a href="https://www.google.com/search?q=site: intitle:submit | intitle:contact | intitle: submit | intitle:feedback | intitle:survey | intitle:form | intitle:&quot;fill up&quot;" target="_blank" class="search-link"><div><p>Form Finder intitle</p>
+			<img id="icon" src="images/form.png"></div></a>
+		</div>
+		<div class="w3-third">  
+			<a href="https://www.google.com/search?q=site: inurl:contact | inurl:feedback | inurl:survey | inurl:form" target="_blank" class="search-link"><div><p>Form Finder inurl</p>
+			<img id="icon" src="images/form.png"></div></a>
+		</div>
+		<div class="w3-third">  
+			<a href="https://www.google.com/search?q=site: intitle:signup | intitle:register | intext:signup | intext:&quot;sign up&quot; | intext:register | intext:username | inurl:signup | inurl:register" target="_blank" class="search-link"><div><p>Register/Signup</p>
+			<img id="icon" src="images/form.png"></div></a>
+		</div>
+		<div class="w3-third">  
+			<a href="https://www.google.com/search?q=site: intitle:contact | intext:&quot;contact us&quot; | intext:survey | intitle:survey" target="_blank" class="search-link"><div><p>Contact us</p>
+			<img id="icon" src="images/form.png"></div></a>
+		</div>
+	</div>	<!--w3-row-padding div closed here -->
+
+  
+</div>
+<!--Div 2 ends here -->
+
+
+<script>
+//For 3rd Party Exposure
+function updateBitbucketLink(targetValue) {
+    const bitbucketLink = document.querySelector('.bitbucket-link');
+    
+    if (bitbucketLink && targetValue) {
+        const originalHref = bitbucketLink.getAttribute('data-original-href') || bitbucketLink.href;
+        bitbucketLink.setAttribute('data-original-href', originalHref);
+        
+        // Add the target after site:bitbucket.org
+        const updatedHref = originalHref.replace(
+            /(site:bitbucket\.org)([^|]*)/g, 
+            `$1 ${targetValue}$2`
+        );
+        
+        bitbucketLink.href = updatedHref;
+    }
+}
+
+//For Pastbin
+function updatePastbinLink(targetValue) {
+    const pastebinLink = document.querySelector('.pastbin-link');
+    
+    if (pastebinLink && targetValue) {
+        const originalHref = pastebinLink.getAttribute('data-original-href') || pastebinLink.href;
+        pastebinLink.setAttribute('data-original-href', originalHref);
+        
+        // Add the target after site:pastebin.com
+        const updatedHref = originalHref.replace(
+            /(site:pastebin\.com)([^|]*)/g, 
+            `$1 ${targetValue}$2`
+        );
+        
+        pastebinLink.href = updatedHref;
+    }
+}
+
+
+//For .s3.amazonaws.com
+function updateS3Link(targetValue) {
+    const s3Link = document.querySelector('.s3-link');
+    
+    if (s3Link && targetValue) {
+        const originalHref = s3Link.getAttribute('data-original-href') || s3Link.href;
+        s3Link.setAttribute('data-original-href', originalHref);
+        
+        // Add the target after site:.s3.amazonaws.com
+        const updatedHref = originalHref.replace(
+            /(site:.s3.amazonaws\.com)([^|]*)/g, 
+            `$1 ${targetValue}$2`
+        );
+        
+        s3Link.href = updatedHref;
+    }
+}
+
+
+// Add this to your form submit handlers
+document.getElementById('targetForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const targetValue = document.getElementById('targetInput').value.trim();
+    //For 3rd Party Exposure
+    updateBitbucketLink(targetValue);
+    //For Pastbin
+    updatePastbinLink(targetValue);
+    //For s3
+    updateS3Link(targetValue);
+    updateSearchLinks(targetValue); // Keep your existing function
+});
+
+document.getElementById('targetForm2').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const targetValue = document.getElementById('targetInput2').value.trim();
+    //For 3rd Party Exposure
+    updateBitbucketLink(targetValue);
+    //For Pastbin
+    updatePastbinLink(targetValue);
+    //For s3
+    updateS3Link(targetValue);
+    updateSearchLinks(targetValue); // Keep your existing function
+});
+</script>
+
+
+
+<script>
+function switchVisible() {
+    if (document.getElementById('Div1')) {
+        if (document.getElementById('Div1').style.display == 'none') {
+            document.getElementById('Div1').style.display = 'block';
+            document.getElementById('Div2').style.display = 'none';
+        }
+        else {
+            document.getElementById('Div1').style.display = 'none';
+            document.getElementById('Div2').style.display = 'block';
+        }
+    }
+}
+
+// Function to update all search links with the target value
+function updateSearchLinks(targetValue) {
+    const searchLinks = document.querySelectorAll('.search-link');
+    
+    searchLinks.forEach(link => {
+        const originalHref = link.getAttribute('data-original-href') || link.href;
+        link.setAttribute('data-original-href', originalHref);
+        
+        if (targetValue) {
+            // Check if it's a Google search link
+            if (link.href.includes('google.com/search')) {
+                const url = new URL(originalHref);
+                const searchParams = new URLSearchParams(url.search);
+                let query = searchParams.get('q') || '';
+                
+                // Add the target to the site: parameter
+                if (query.includes('site:')) {
+                    query = query.replace(/site:\s*([^ |]*)/g, `site:${targetValue} $1`);
+                } else {
+                    query = `site:${targetValue} ${query}`;
+                }
+                
+                searchParams.set('q', query.trim());
+                url.search = searchParams.toString();
+                link.href = url.toString();
+            }
+        } else {
+            // Reset to original if no target
+            link.href = originalHref;
+        }
+    });
+}
+
+// Handle form submission for both forms
+document.getElementById('targetForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const targetValue = document.getElementById('targetInput').value.trim();
+    updateSearchLinks(targetValue);
+});
+
+document.getElementById('targetForm2').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const targetValue = document.getElementById('targetInput2').value.trim();
+    updateSearchLinks(targetValue);
+});
+
+// Initialize with empty target
+updateSearchLinks('');
+</script>
+<center style="color: #7e7e7e;">Just message <a href="https://twitter.com/dirtycoder0124" target="_blank" class="search-link">@dirtycoder0124</a> to add your favorite dork</center>
+
+
+
+</body>
+
+</html>

@@ -118,6 +118,18 @@
     <img id="icon" src="images/pastebin.jpg"></div></a>
   </div>
   <div class="w3-third">
+    <a href="https://www.google.com/search?q=(site:pastebin.com OR site:paste.myst.rs OR site:paste.ax OR site:beanpaste.fun OR site:rentry.co OR site:lesma.eu OR site:paste.monster OR site:snippet.host OR site:gist.github.com OR site:gitlab.com OR site:codepen.io OR site:repl.it OR site:paste.ubuntu.com OR site:invent.kde.org OR site:snipplr.com OR site:paste.xinu.at OR site:www.geany.org OR site:paste.pound-python.org OR site:paste.frubar.net OR site:slexy.org OR site:textsnip.com OR site:phpfiddle.org OR site:pastebin.icoder.uz OR site:pst.klgrth.io OR site:www.heypasteit.com OR site:paste.lisp.org OR site:pasteall.org OR site:paste.scratchbook.ch OR site:dumpz.org OR site:paste.strictfp.com)" target="_blank" class="pastbin-alter"><div><p>Alternative Pastebin 1</p>
+    <img id="icon" src="images/pastebin.jpg"></div></a>
+  </div>
+  <div class="w3-third">
+    <a href="https://www.google.com/search?q=(site:cl1p.net OR site:pastie.org OR site:pastecode.io OR site:pastebin.fr OR site:jsitor.com OR site:termbin.com OR site:p.ip.fi OR site:cutapaste.net OR site:paste.sh OR site:paste.jp OR site:paste-bin.xyz OR site:paste.debian.net OR site:vpaste.net OR site:paste.org.ru OR site:quickhighlighter.com OR site:commie.io OR site:everfall.com OR site:kpaste.net OR site:www.pastebin.pt OR site:n0paste.tk OR site:tutpaste.com OR site:bitbin.it OR site:pastebin.fi OR site:nekobin.com OR site:www.paste4btc.com OR site:pastejustit.com OR site:pastebin.ai OR site:paste.js.org OR site:pastefs.com)" target="_blank" class="pastbin-alter2"><div><p>Alternative Pastebin 2</p>
+    <img id="icon" src="images/pastebin.jpg"></div></a>
+  </div>
+  <div class="w3-third">
+    <a href="https://www.google.com/search?q=(site:pastebin.com OR site:apaste.info OR site:pastesqf.com OR site:sprunge.us OR site:pastecode.fr OR site:99paste.com OR site:nopaste.me OR site:www.paste.lv OR site:codepad.org OR site:ghostbin.com OR site:paste.mozilla.org OR site:pasteio.com)" target="_blank" class="pastbin-alter3"><div><p>Alternative Pastebin 3</p>
+    <img id="icon" src="images/pastebin.jpg"></div></a>
+  </div>
+  <div class="w3-third">
     <a href="https://crt.sh/?q=" target="_blank" class="search-link"><div><p>Subdomains(crt.sh)</p>
     <img id="icon" src="images/crt_sh.jpg"></div></a>
   </div>
@@ -308,6 +320,62 @@ function updatePastbinLink(targetValue) {
 }
 
 
+//For Pastbin alternative1
+function updatePastbinLink1(targetValue) {
+    const pastebinAlter = document.querySelector('.pastbin-alter');
+    
+    if (pastebinAlter && targetValue) {
+        const originalHref2 = pastebinAlter.getAttribute('data-original-href') || pastebinAlter.href;
+        pastebinAlter.setAttribute('data-original-href', originalHref2);
+        
+        // Add the target after .com)
+        const updatedHref2 = originalHref2.replace(
+            /(.com)\)([^|]*)/g, 
+            `$1 ) "${targetValue}"$2`
+        );
+        
+        pastebinAlter.href = updatedHref2;
+    }
+}
+
+//For Pastbin alternative2
+function updatePastbinLink2(targetValue) {
+    const pastebinAlter2 = document.querySelector('.pastbin-alter2');
+    
+    if (pastebinAlter2 && targetValue) {
+        const originalHref3 = pastebinAlter2.getAttribute('data-original-href') || pastebinAlter2.href;
+        pastebinAlter2.setAttribute('data-original-href', originalHref3);
+        
+        // Add the target after .com)
+        const updatedHref3 = originalHref3.replace(
+            /(.com)\)([^|]*)/g, 
+            `$1 ) "${targetValue}"$2`
+        );
+        
+        pastebinAlter2.href = updatedHref3;
+    }
+}
+
+//For Pastbin alternative3
+function updatePastbinLink3(targetValue) {
+    const pastebinAlter = document.querySelector('.pastbin-alter3');
+    
+    if (pastebinAlter && targetValue) {
+        const originalHref2 = pastebinAlter.getAttribute('data-original-href') || pastebinAlter.href;
+        pastebinAlter.setAttribute('data-original-href', originalHref2);
+        
+        // Add the target after .com)
+        const updatedHref2 = originalHref2.replace(
+            /(.com)\)([^|]*)/g, 
+            `$1 ) "${targetValue}"$2`
+        );
+        
+        pastebinAlter.href = updatedHref2;
+    }
+}
+
+
+
 //For .s3.amazonaws.com
 function updateS3Link(targetValue) {
     const s3Link = document.querySelector('.s3-link');
@@ -335,6 +403,12 @@ document.getElementById('targetForm').addEventListener('submit', function(e) {
     updateBitbucketLink(targetValue);
     //For Pastbin
     updatePastbinLink(targetValue);
+    // For Pastbin alternative
+    updatePastbinLink1(targetValue);
+    updatePastbinLink2(targetValue);
+    updatePastbinLink3(targetValue);
+
+
     //For s3
     updateS3Link(targetValue);
     updateSearchLinks(targetValue); // Keep your existing function
@@ -347,6 +421,10 @@ document.getElementById('targetForm2').addEventListener('submit', function(e) {
     updateBitbucketLink(targetValue);
     //For Pastbin
     updatePastbinLink(targetValue);
+    // For Pastbin alternative
+    updatePastbinLink1(targetValue);
+    updatePastbinLink2(targetValue);
+    updatePastbinLink3(targetValue);
     //For s3
     updateS3Link(targetValue);
     updateSearchLinks(targetValue); // Keep your existing function
